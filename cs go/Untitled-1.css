@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@600&family=Open+Sans&display=swap");
+body {
+    margin: 0;
+}
+h1,
+h2 {
+    font-family: "Merriweather", serif;
+}
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+/* С€Р°РїРєР° */
+header {
+    background-color: #080a0f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    padding: 20px;
+    width: 40%;
+}
+.logoImg {
+    float: left;
+    margin-right: 20px;
+}
+.headerH1,
+.headerH2 {
+    margin: 0;
+}
+ul {
+    width: 100%;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: right;
+}
+a {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+}
+.navA {
+    margin-right: 50px;
+}
+
+/* РєР°СЂС‚РёРЅРєР° СЃ С‚РµРєСЃС‚РѕРј */
+main {
+    background-image: url(Images/main.jpg);
+    background-size: cover;
+    margin: 0;
+    color: white;
+    padding: 122px;
+}
+.mainTextBlock {
+    width: 35%;
+    line-height: 1.3em;
+}
+.title {
+    padding-left: 120px;
+}
+
+/* РєРѕРјР°РЅРґС‹ */
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+article {
+    width: 30%;
+}
+.photo1 {
+    width: 200px;
+}
+
+footer {
+    background-color: #080a0f;
+    color: white;
+}
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+.footerHighlight {
+    color: lightgray;
+}

@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Comfortaa", cursive;
+}
+
+/*  рассылка  */
+
+.subscribe {
+    background-color: #00acee;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribeP {
+    color: #e3f1fc;
+}
+span {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+input,
+input::placeholder {
+    font-family: "Comfortaa", cursive;
+    color: #00acee;
+    font-weight: 600;
+}
+input {
+    border: 1px solid gray;
+    padding: 0.5em;
+    border-radius: 5px;
+    outline: none;
+}
+input::placeholder {
+    color: #00acee77;
+}
+input:focus {
+    background-color: #e3f1fc;
+}
+
+/*  шапка  */
+
+header {
+    display: flex;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 300px;
+    max-height: 62px;
+    transition: transform 1s;
+
+    animation: bounceInUp 2s 1;
+}
+
+nav {
+    font-size: 24px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+li:first-child:hover {
+    animation: move1 1s ease infinite;
+}
+li:nth-child(2n):hover {
+    animation: move2 2s infinite;
+}
+
+li:last-child:hover {
+    animation: move3 2s;
+    animation-play-state: paused;
+}
+
+@keyframes move1 {
+    0% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes move2 {
+    0% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes move3 {
+    100% {
+        transform: scale(2);
+    }
+}
+
+.menu {
+    text-decoration: none;
+    color: #00acee;
+}
+
+.menu:visited {
+    color: #777777;
+}
+
+.line {
+    margin: 0 auto;
+    width: 55%;
+    height: 2px;
+    background-color: #00acee;
+}
+
+/*  main  */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+
+article {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 20%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.card {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    filter: blur(3px);
+    animation: moveCard 1s 1;
+    animation-fill-mode: forwards;
+}
+.card:nth-child(1) {
+    animation-delay: 0ms;
+}
+.card:nth-child(2) {
+    animation-delay: 100ms;
+}
+.card:nth-child(3) {
+    animation-delay: 200ms;
+}
+.card:nth-child(4) {
+    animation-delay: 300ms;
+}
+
+@keyframes moveCard {
+    to {
+        top: 0px;
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.img {
+    position: relative;
+    width: 100%;
+    transition: transform 2s;
+    z-index: 0;
+}
+.img:hover {
+    transform: scale(1.2);
+}
+
+.text {
+    position: relative;
+    background-color: #00acee;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    z-index: 1000;
+}
+.text::first-letter {
+    font-size: 24px;
+    color: #ff5311;
+}
+.text::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+}
+
+/*  footer  */
+
+footer {
+    background-color: rgb(233, 233, 233);
+    color: #777777;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.group {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footerA1 {
+    color: #ff5311;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.footerA {
+    color: #00acee;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.footerP {
+    margin-left: 30px;
+}
+
+/* планшеты горизонтально */
+@media (min-width: 992px) and (max-width: 1199px) {
+ .card {
+     width: 30%;
+ }
+}
+
+/* планшеты вертикально */
+@media (min-width: 768px) and (max-width: 991px) {
+input {
+    max-width: 100px;
+}
+main {
+    min-height: 65vh;
+}
+.card {
+    width: 30%;
+}
+
+}
+
+/* телефоны горизонтально */
+@media (max-width: 767px) {
+    .logo{
+        width: 50%;
+    }
+    span{
+        font-size: 20px;
+    }
+    input{
+        max-width: 100px;
+    }
+    header,article{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 50%;
+        padding-bottom: 10px;
+    }
+}
+
+/* телефоны вертикально */
+@media (max-width: 480px) {
+    .logo{
+        width: 50%;
+    }
+    header{
+        flex-direction: column;
+    }
+    nav{
+        margin-right:0;
+    }
+    li{
+        margin-right: 5px;
+    }
+    .card{
+        width: 70%;
+    }
+    .group{
+        flex-direction: column;
+        padding-left:5px;
+    }
+}
